@@ -1,0 +1,1 @@
+This is a project to practice javascript packages dealing with live chat servers, sign in and log in and other functonalities.
