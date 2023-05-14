@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function Signup() {
+function SignUp() {
     const [user, setUser] = useState()
     const signUp = () => {
 
@@ -29,4 +29,4 @@ function Signup() {
   )
 };
 
-export default Signup
+export default SignUp
