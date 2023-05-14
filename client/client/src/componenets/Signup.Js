@@ -2,6 +2,10 @@ import React, {useState} from 'react'
 
 function Signup() {
     const [user, setUser] = useState()
+    const signUp = () => {
+
+    }
+
   return (
     <div className = "signUp">
         <label>Sign Up</label>
@@ -14,10 +18,12 @@ function Signup() {
         <input placeholder= "Username" onChange={(event) => {
             setUser({...user, username: event.target.value})
         }} />
-        <input placeholder= "Passwor" onChange={(event) => {
+        <input placeholder= "Password" onChange={(event) => {
             setUser({...user, password: event.target.value})
         }} />
-        
+        <button onClick ={signUp}> Sign Up 
+
+        </button>
 
     </div>
   )
