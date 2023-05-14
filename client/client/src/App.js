@@ -5,9 +5,19 @@ import { StreamChat } from 'stream-chat';
 
 function App() {
   const api_key = process.env.APIKEY
-  
-  const client = StreamChat.getInstance()
+  const cookies = new Cookies();
+  const token = cookies.get("token");
+  const client = StreamChat.getInstance(api_key);
 
+if (token) {
+  client.connetUser({
+    id: cookies.get("userId"),
+    name: cookies.get("username"),
+    firstName: cookies.get("firstName"),
+    lastName: cookies.get("lastName"),
+    hashedPassword: cookies.get("hashedPassword"),
+  });
+}
   return (
     <div className="App">
       <SignUp />
