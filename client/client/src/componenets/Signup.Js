@@ -11,6 +11,12 @@ function Signup() {
         <input placeholder= "Last Name" onChange={(event) => {
             setUser({...user, lastName: event.target.value})
         }} />
+        <input placeholder= "Username" onChange={(event) => {
+            setUser({...user, username: event.target.value})
+        }} />
+        <input placeholder= "Passwor" onChange={(event) => {
+            setUser({...user, password: event.target.value})
+        }} />
         
 
     </div>
