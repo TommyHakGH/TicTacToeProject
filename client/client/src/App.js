@@ -1,6 +1,7 @@
 import './App.css';
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
+import Cookies from "universal-cookie";
 import { StreamChat } from 'stream-chat';
 
 function App() {
@@ -16,6 +17,10 @@ if (token) {
     firstName: cookies.get("firstName"),
     lastName: cookies.get("lastName"),
     hashedPassword: cookies.get("hashedPassword"),
+  },
+  token
+  ).then((user) => {
+    console.log(user);
   });
 }
   return (
