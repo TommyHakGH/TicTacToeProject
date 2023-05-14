@@ -1,18 +1,18 @@
 import React from 'react'
 
 function Login() {
-
+const logIn = () => {};
 
   return (
-    <div className = "signUp">
-        <label>Log In</label>
+    <div className = "logIn">
+        <label> LogIn </label>
         <input placeholder= "Username" onChange={(event) => {
             setUser({...user, username: event.target.value})
         }} />
         <input placeholder= "Password" onChange={(event) => {
             setUser({...user, password: event.target.value})
         }} />
-        <button onClick ={signUp}> Sign Up 
+        <button onClick ={logIn}> Login 
 
         </button>
 

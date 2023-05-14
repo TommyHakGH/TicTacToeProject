@@ -4,7 +4,7 @@ function Signup() {
     const [user, setUser] = useState()
     const signUp = () => {
 
-    }
+    };
 
   return (
     <div className = "signUp">
@@ -27,6 +27,6 @@ function Signup() {
 
     </div>
   )
-}
+};
 
 export default Signup
