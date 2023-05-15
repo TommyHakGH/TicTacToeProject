@@ -3,9 +3,9 @@ import cors from "cors";
 import { StreamChat } from "stream-chat"; 
 import {v4 as uuidv4} from "uuid";
 import bcrypt from "bcrypt";
-require('dotenv').config( {path: '/custom/path/.env'} );
+import { createRequire } from 'module';
 
-
+const require = createRequire(import.meta.url);
 const app = express();
 
 app.use(cors());
@@ -13,6 +13,7 @@ app.use(express.json());
 const api_key = process.env.APIKEY
 const api_secret = process.env.APISECRET
 const serverClient = StreamChat.getInstance(api_key, api_secret);
+require('dotenv').config();
 
 app.post("/signup", async (req, res) => {
     try{
