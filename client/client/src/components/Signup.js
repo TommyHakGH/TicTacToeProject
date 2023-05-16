@@ -4,20 +4,20 @@ import Cookies from "universal-cookie";
 
 function SignUp() {
     const cookies = new Cookies();
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null);
 
     const signUp = () => {
         Axios.post("http://localhost:3001/signup", user)
-        .then(res =>{
+        .then((res) =>{
             const {token, userId, firstName, lastName, username, hashedPassword} = 
             res.data;
 
-            cookies.set("token", token);
-            cookies.set("userId", userId);
-            cookies.set("firstName", firstName);
-            cookies.set("lastName", lastName);
-            cookies.set("username", username);
-            cookies.set("hashedPassword", hashedPassword);
+            cookies.set("token", token, {sameSite:"strict"});
+            cookies.set("userId", userId, {sameSite:"strict"});
+            cookies.set("firstName", firstName, {sameSite:"strict"});
+            cookies.set("lastName", lastName, {sameSite:"strict"});
+            cookies.set("username", username, {sameSite:"strict"});
+            cookies.set("hashedPassword", hashedPassword, {sameSite:"strict"});
         });
 
     };
